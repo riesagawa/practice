@@ -1,0 +1,231 @@
+@media only screen and (min-width: 800px){
+  .burger-content{
+    display: none;
+  }
+}
+
+
+@media only screen and (max-width: 799px){
+  .side-bar{
+    height:55px;
+    width:100%;
+    border-bottom: .2px solid rgba(94, 93, 93, 0.6);
+  }
+  .side-contents{
+    background-color:black;
+    height:100%;
+    width:100%;
+    padding:0 ;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .side-contents img{
+    padding:0;
+
+  }
+  .main-contents{
+    padding-top: 55px;
+    width:100%;
+  }
+
+  .menu-content,.side-icons{
+    display:none;
+  }
+
+/*🍔*/
+  .menu-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    height: 25px;
+    width: 25px;
+    justify-content: center;
+    align-items: center;
+    z-index: 90;
+    background-color: black;
+    padding-top: 5px;
+}
+.menu-btn span,
+.menu-btn span:before,
+.menu-btn span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    transition: all 0.5s;/*アニメーション設定*/
+}
+.menu-btn span:before {
+    bottom: 8px;
+}
+.menu-btn span:after {
+    top: 8px;
+}
+/*三本線のうち、真ん中*/
+#menu-btn-check:checked ~ .menu-btn span {
+    background-color: rgba(255, 255, 255, 0);/*メニューオープン時は真ん中の線を透明にする*/
+}
+/*三本線のうち、上の線*/
+#menu-btn-check:checked ~ .menu-btn span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+}
+/*三本線のうち、下の線*/
+#menu-btn-check:checked ~ .menu-btn span::after {
+    top: 0;
+    transform: rotate(-45deg);
+}
+#menu-btn-check:checked ~ .burger-content {
+    left: 0;/*クリックされたらメニューを画面内へ*/
+}
+/*閉じるためのcss*/
+.menu-btn-close{
+  width: 100%;
+  height: 100%;
+  background: red;
+  opacity:0;
+  position: fixed;
+  top: 0;
+  left: 100%;/* 閉じるための要素を画面外へ */
+  z-index: 70;/* 重なり順をメニューより下に*/
+  transition: .5s;
+}
+#menu-btn-check:checked ~ .menu-btn-close{
+  left:0;
+}
+
+.burger-content ul {
+  padding: 70px 10px 0;
+}
+.burger-content ul li {
+  border-bottom: solid 1px #ffffff;
+  list-style: none;
+}
+.burger-content ul li a {
+  display: block;
+  width: 100%;
+  font-size: 14px;
+  font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
+  box-sizing: border-box;
+  color:#ffffff;
+  text-decoration: none;
+  padding: 15px 25px 15px 25px;
+  position: relative;
+}
+.burger-content ul li a::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-top: solid 2px #ffffff;
+  border-right: solid 2px #ffffff;
+  transform: rotate(45deg);
+  position: absolute;
+  left:5px;
+  top: 22px;
+}
+.burger-content {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 100%;/*leftの値を変更してメニューを画面外へ*/
+  z-index: 80;
+  background-color:black;
+  transition: all 0.5s;/*アニメーション設定*/
+}
+.burger-icons a{
+  font-size:17px;
+  padding-right:14px;
+  color:white;
+}
+.burger-icons{
+  padding: 10px;
+  border-bottom:1px solid white ;
+}
+.burger-icons .fab:hover{
+  opacity: .8;
+}
+.burger-content ul li a:hover{
+  text-decoration: underline;
+}/*🍔ここまで*/
+
+/*ブランドコンテンツ*/
+.brand-contents{
+  flex-direction: column;
+}
+.brand-items{
+  width:100%;
+  margin:0 auto;
+}
+.brand-items img{
+  width:40%;
+}
+.brand-items p{
+  padding-bottom: 45px;
+}
+/**/
+.company-contents{
+  /* background-color: cornflowerblue */
+}
+.company-map{
+  height:275px;
+}
+.footer{
+  width:100%;
+}
+}
+
+
+
+/*639px以下の時*/
+@media only screen and (max-width: 639px){
+
+.photo img,.big-photo img{
+  flex-direction: column;/**/
+  width:100%;
+  height:auto;
+}
+
+.project-items{
+  display: flex;
+  flex-direction: column;
+}
+.project-items img{
+  margin:0 auto;
+  padding-bottom: 20px;
+  padding-right: 0;
+}
+.company-contents{
+  display:flex;
+  flex-direction: column;
+}
+.company-item{
+  width:100%;
+  margin-bottom:40px;
+}
+.company-map{
+  position: static;/*absolute解除*/
+  width:100%;
+  height:250px;
+}
+.company-wrapper{
+  margin-bottom: 100px;
+}
+}
+
+
+/*450px以下の時*/
+@media only screen and (max-width: 450px){
+.project-items img{
+  width:100%;
+}
+.message-wrapper{
+  width:95%;
+}
+.message-wrapper p{
+  padding-bottom: 30px;
+}
+}

@@ -1,0 +1,240 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  text-size-adjust: 100%;
+  overflow-x: hidden;
+  color: rgb(255, 255, 255);
+  font: 300 14px / 1.9 "Noto Sans JP", Arial, Verdana, 游ゴシック, YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, sans-serif;
+  background-color: rgb(0, 0, 0);
+}
+
+.wrapper{
+  background-color: black;
+}
+.side-bar{
+  width:20%;
+  position: fixed;/* 要素の位置を固定する */
+  right:0; /*基準の位置を画面の一番右に指定する */
+  height:100%;
+}
+.side-contents{
+  padding-left: 16%;
+
+}
+.side-contents a{
+  color:white;
+}
+.side-logo{
+  height:22.42px;
+  width:87px;
+  padding:25px 0 30px 0;
+}
+.side-contents ul{
+  list-style: none;
+}
+.side-contents li{
+  padding:10px 0;
+  font-size: 14px;
+}
+.side-contents li a{
+  font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+.side-contents li a::after{
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: white;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform .3s;
+}
+.side-contents li a:hover::after {
+  transform: scale(1, 1);
+}
+.side-icons{
+  display:block;
+  padding-top: 40px;
+}
+.side-icons a{
+  font-size:17px;
+  padding-right:14px;
+}
+.side-icons a:hover{
+  opacity:0.8;
+}
+
+.main-contents{
+  width:80%;
+}
+.top-img img{
+  width:100%;
+}
+.message-wrapper{
+  color:white;
+  width:60%;
+  margin: 0 auto;
+  text-align:center;
+}
+.message-wrapper h1{
+  display:inline-block;
+  font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
+  font-size:22px;
+  font-weight: normal;
+  padding-bottom: 20px;
+  border-bottom: 3px solid white;
+  margin:75px 0 50px 0;
+}
+.message-wrapper p{
+  text-align:left;
+  padding-bottom: 80px;
+}
+
+ .photo img{
+  width:33.3333%;
+}
+.photo,.big-photo{
+  display:flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+.big-photo img{
+  width:100%;
+}
+
+.brand-wrapper{
+  color:white;
+  text-align: center;
+  width:80%;
+  margin:0 auto;
+}
+.brand-wrapper h1{
+  display:inline-block;
+  font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
+  font-size:22px;
+  font-weight: normal;
+  padding-bottom: 20px;
+  border-bottom: 3px solid white;
+  margin:65px 0 50px 0;
+}
+.brand-contents{
+  display:flex;
+  padding-bottom: 50px;
+  border-bottom: 1px solid white;
+  margin-bottom: 10px;
+}
+.brand-items{
+  width:25%;
+  margin:0 auto;
+}
+.brand-items img{
+  width:75%;
+}
+.brand-items p{
+  font-size: 14px;
+  text-align: left;
+  width:75%;
+  display: inline-block;
+}
+
+.project-wrapper{
+  color:white;
+  text-align: center;
+  width:80%;
+  margin:0 auto;
+}
+.project-wrapper h1{
+  display:inline-block;
+  font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
+  font-size:22px;
+  font-weight: normal;
+  padding-bottom: 20px;
+  border-bottom: 3px solid white;
+  margin:65px 0 50px 0;
+}
+.project-contents{
+  padding-top:10px;
+  padding-bottom:45px;
+  border-bottom: 1px solid white;
+}
+.project-items{
+  /*background-color: darkorchid;*/
+  text-align: left;
+  padding-bottom: 80px;
+}
+.project-items img{
+  width:375px;
+  height:225px;
+  padding-right: 20px;
+  float:left;
+}
+.project-items p{
+  text-align: left;
+  /*background-color: blue;*/
+}
+
+
+.company-wrapper{
+  color:white;
+  width:80%;
+  margin:0 auto;
+  text-align:center;
+  margin-bottom: 200px;
+}
+.company-wrapper h1{
+  display:inline-block;
+  font-family: 'Modern Antiqua', 'Noto Sans JP',serif;
+  font-size:22px;
+  font-weight: normal;
+  padding-bottom: 20px;
+  border-bottom: 3px solid white;
+  margin:65px 0 70px 0;
+}
+.company-contents{/*pとmapの箱*/
+  display:flex;
+  position: relative;/*アンカー打った*/
+}
+.company-item{/*pの箱*/
+  width:30%;
+}
+.company-item p{
+  text-align: left;
+  font-size:14px;
+}
+.company-map{
+  width:60%;
+  height: 200px;
+  background-color:gray;
+  position: absolute;
+  right: 0;
+  top:0;
+}
+.company-map frame{
+  width:100%;
+}
+
+.footer{
+  width:80%;
+  text-align: center;
+  color:white;
+  font-size:12px;
+  padding:0 0 45px 0;
+}
+.footer a{
+  text-decoration: none;
+  color:#0066ff;
+}
+
+#menu-btn-check {
+  display: none;
+}
+.burger-content ul li{
+  list-style: none;
+}
