@@ -18,10 +18,10 @@ body {
   position: fixed;/* 要素の位置を固定する */
   right:0; /*基準の位置を画面の一番右に指定する */
   height:100%;
+  z-index: 110;
 }
 .side-contents{
   padding-left: 16%;
-
 }
 .side-contents a{
   color:white;
@@ -197,17 +197,18 @@ body {
   border-bottom: 3px solid white;
   margin:65px 0 70px 0;
 }
-.company-contents{/*pとmapの箱*/
-  display:flex;
-  position: relative;/*アンカー打った*/
+.company-contents{
+  /* display:flex; */
+  position: relative;
 }
-.company-item{/*pの箱*/
+.company-item{/*住所の箱*/
   width:30%;
-}
-.company-item p{
   text-align: left;
   font-size:14px;
+  font-weight: lighter;
+  z-index: auto;
 }
+
 .company-map{
   width:60%;
   height: 200px;

@@ -43,7 +43,7 @@
     width: 25px;
     justify-content: center;
     align-items: center;
-    z-index: 90;
+    z-index: 190;
     background-color: black;
     padding-top: 5px;
 }
@@ -228,4 +228,6 @@
 .message-wrapper p{
   padding-bottom: 30px;
 }
+
+
 }
